@@ -1,5 +1,12 @@
 import java.util.Scanner;
 
+/*
+Takes in input from two basketball teams of different points awarded (3-pointer, 2-pointer, 1-pointer)
+If apple team had a higer score, the program will print A
+If banana team had a higer score, the program will print B
+If it's a tie, the program will print T
+*/
+
 public class j1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
