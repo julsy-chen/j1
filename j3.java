@@ -1,5 +1,11 @@
 import java.util.Scanner;
 
+/*
+ * First, takes in input of an integer that determines the number of lines of input
+ * Then, takes in that number of inputs as lines as a code with multiple symbols
+ * Ouputs the number of consecutive symbols then the symbol, and repeats for the entire line of code
+ */
+
 public class j3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -32,16 +38,17 @@ public class j3 {
                     value = Integer.toString(counter) + " " + Character.toString(current);
                     current = symbol;
 
-                    if (output == "") {
-                        output = value;
-                    } else {
-                        output = output + " " + value;
-                    }
-                    counter = 1;
+                    output = output == "" ? value : output + " " + value; // if output is empty, output will b set to
+                                                                          // value, otherwise, output adds value to
+                                                                          // itself with a space in between
+                    counter = 1; // updating counter - first instance for a new character
                 }
             }
-            value = Integer.toString(counter) + " " + Character.toString(current);
-            output = output == "" ? value : output + " " + value;
+            value = Integer.toString(counter) + " " + Character.toString(current); // for when the symbol never changes
+                                                                                   // on a line
+            output = output == "" ? value : output + " " + value; // if output is empty, output will be set to value,
+                                                                  // otherwise, output adds value to itself with a space
+                                                                  // in between
 
             // output
             System.out.println(output);
